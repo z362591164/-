@@ -1,0 +1,23 @@
+allow-lan: true
+external-controller: 127.0.0.1:9090
+log-level: info
+mode: Rule
+port: 7890
+proxies:
+- alterId: 0
+  cipher: auto
+  name: JMS-1160542@c44s4.portablesubmarines.com:10960
+  port: 10960
+  server: c44s4.portablesubmarines.com
+  tls: false
+  type: vmess
+  udp: true
+  uuid: be503a3d-62c2-4632-affb-f97c004eae08
+proxy-groups:
+- name: 🚀 节点选择
+  proxies:
+  - JMS-1160542@c44s4.portablesubmarines.com:10960
+  type: select
+rules:
+- MATCH,🚀 节点选择
+socks-port: 7891
